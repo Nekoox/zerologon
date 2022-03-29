@@ -1,7 +1,8 @@
 # Zerologon
-Set of scripts, to test and exploit the zerologon vulnerability (CVE-2020-1472). 
+Set of scripts, to test and exploit the zerologon vulnerability (CVE-2020-1472)
 
-<img src="https://imgur.com/71fdoCW.jpg" alt="banner"/>
+<br>
+<img src="https://imgur.com/N5X7OA6.png" alt="banner"/>
 
 ***
 
@@ -15,13 +16,13 @@ ZeroLogon is a vulnerability that allows us to exploit a cryptography flaw in Mi
 
 Before executing the exploit we must know that we need a different version of impacket, for this we will do the following. 
 
-``> apt remove --purge impacket-scripts python3-impacket``
+``apt remove --purge impacket-scripts python3-impacket``
 
-``> git clone https://github.com/SecureAuthCorp/impacket.git``
+``git clone https://github.com/SecureAuthCorp/impacket.git``
 
-``> cd impacket``
+``cd impacket``
 
-``> pip install .``
+``pip install .``
 
 ***
 
