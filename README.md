@@ -1,6 +1,8 @@
 # Zerologon
 Set of scripts, to test and exploit the zerologon vulnerability (CVE-2020-1472). 
 
+![image](https://imgur.com/a/8gl8fGm)
+
 ***
 
 # What is it?
