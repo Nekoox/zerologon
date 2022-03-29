@@ -82,7 +82,7 @@ def try_zero_authenticate(dc_handle, dc_ip, target_computer):
   except nrpc.DCERPCSessionError as ex:
     
       return None
-    else:
+   else:
       fail(f'Unexpected error code from DC: {ex.get_error_code()}.')
   except BaseException as ex:
     fail(f'Unexpected error: {ex}.')
